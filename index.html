@@ -221,18 +221,7 @@
 														<use xlink:href="#user"></use>
 													</svg>
 												</a>
-												<div class="header-action__body">
-													<div class="header-action__box">
-														<div class="header-action__title">
-															Личный кабинет
-														</div>
-														<div class="header-action__block">
-															<a href="#sing-in" data-fancybox="">Войти</a> или <a href="#registration"
-																data-fancybox="">Зарегистрироваться</a>
-														</div>
-													</div>
-												</div>
-											</div>
+d											</div>
 										</div>
 										<div class="header-center__action">
 											<div class="header-action">
@@ -245,12 +234,12 @@
 										</div>
 										<div class="header-center__action">
 											<div class="header-action">
-												<div class="header-action__top">
+												<a href="basket.html" class="header-action__top">
 													<span>1</span>
 													<svg>
 														<use xlink:href="#basket"></use>
 													</svg>
-												</div>
+												</a>
 											</div>
 										</div>
 									</div>
@@ -265,9 +254,10 @@
 							<div class="header-bottom__row">
 								<div class="header-bottom__left">
 									<div class="header-bottom__btn">
-										<div class="catalog-menu">
+										<!-- Если убрать класс disabled то будет всплывать подменю -->
+										<div class="catalog-menu disabled">
 											<div class="catalog-menu__top">
-												<div class="catalog-btn">
+												<a href="#" class="catalog-btn">
 													<div class="catalog-btn__body">
 														<span></span>
 														<span></span>
@@ -276,46 +266,169 @@
 													<div class="catalog-btn__text">
 														КАТАЛОГ
 													</div>
-												</div>
+												</a>
 											</div>
-											<div class="catalog-menu__box">
+											<div class="catalog-menu__box open">
 												<div class="catalog-menu__wrap">
-													<div class="catalog-menu__boxes">
-														<div class="catalog-menu__items">
-															<div class="catalog-menu__item">
-																<div class="catalog-menu__item-link">
-																	Мебель
+													<div class="catalog-menu__boxes js-menu-catalog">
+														<div class="catalog-menu__level-1">
+															<div class="catalog-menu__items">
+																<div class="catalog-menu__item js-menu-catalog__item" data-tab="1">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель
+																	</a>
 																	<svg>
 																		<use xlink:href="#chevron"></use>
 																	</svg>
 																</div>
-																<div class="catalog-menu__item-body">
-																	<div class="catalog-menu-sub">
-																		<div class="catalog-menu-sub__items">
-																			<div class="catalog-menu-sub__item">
-																				<div class="catalog-menu-sub__item-link">
-																					Тумбы
-																					<svg>
-																						<use xlink:href="#chevron"></use>
-																					</svg>
-																				</div>
-																				<div class="catalog-menu-sub__item-body">
-																					<div class="catalog-menu-sub">
-																						<div class="catalog-menu-sub__items">
-																							<div class="catalog-menu-sub__item">
-																								<div class="catalog-menu-sub__item-link">
-																									Тумбы уровень 2
-																									<svg>
-																										<use xlink:href="#chevron"></use>
-																									</svg>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
+																<div class="catalog-menu__item js-menu-catalog__item" data-tab="2">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель 2
+																	</a>
+																	<svg>
+																		<use xlink:href="#chevron"></use>
+																	</svg>
+																</div>
+																<div class="catalog-menu__item js-menu-catalog__item" data-tab="3">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель 3
+																	</a>
+																	<svg>
+																		<use xlink:href="#chevron"></use>
+																	</svg>
+																</div>
+																<div class="catalog-menu__item js-menu-catalog__item" data-tab="4">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель 4
+																	</a>
+																	<svg>
+																		<use xlink:href="#chevron"></use>
+																	</svg>
+																</div>
+															</div>
+														</div>
+														<div class="catalog-menu__level-2">
+															<div class="catalog-menu__items js-menu-catalog__body-item" data-tab="1">
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+															</div>
+															<div class="catalog-menu__items js-menu-catalog__body-item" data-tab="2">
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+															</div>
+															<div class="catalog-menu__items js-menu-catalog__body-item" data-tab="3">
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+															</div>
+															<div class="catalog-menu__items js-menu-catalog__body-item" data-tab="4">
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
+																</div>
+																<div class="catalog-menu__item">
+																	<a href="#" class="catalog-menu__item-link">
+																		Мебель уровень 2
+																	</a>
 																</div>
 															</div>
 														</div>
@@ -787,15 +900,368 @@
 			</div>
 		</div>
 		<div class="main">
+			<div class='container'>
+
+<div class="offer-home">
+	<div class="offer-home-slider swiper-container">
+		<div class="offer-home-slider__wrapper swiper-wrapper">
+			<div class="offer-home-slider__slide swiper-slide">
+				<div class="offer-home-slider__item">
+					<div class="offer-home-slider__item-img">
+						<!-- Первая для пк версии -->
+						<picture>
+							<source srcset="img/home/offer-slider-1.webp" type="image/webp">
+							<img src="img/home/offer-slider-1.png" alt="#" />
+						</picture>
+						<!-- Вторая для моб версии, если нет моб версии то будет показывать пк версию -->
+						<picture>
+							<source srcset="img/home/offer-slider-1-mob.webp" type="image/webp">
+							<img src="img/home/offer-slider-1-mob.png" alt="#" />
+						</picture>
+					</div>
+					<div class="offer-home-slider__item-body">
+						<div class="offer-home-slider__item-title">
+							Мы создаём комфорт<br> в вашем доме
+						</div>
+						<div class="offer-home-slider__item-box">
+							<div class="offer-home-slider__item-name">
+								Тумба “Тутанхомон”
+							</div>
+							<div class="offer-home-slider__item-price">
+								390 999 Р
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="offer-home-slider__slide swiper-slide">
+				<div class="offer-home-slider__item">
+					<div class="offer-home-slider__item-img">
+						<!-- Первая для пк версии -->
+						<picture>
+							<source srcset="img/home/offer-slider-1.webp" type="image/webp">
+							<img src="img/home/offer-slider-1.png" alt="#" />
+						</picture>
+						<!-- Вторая для моб версии, если нет моб версии то будет показывать пк версию -->
+						<picture>
+							<source srcset="img/home/offer-slider-1-mob.webp" type="image/webp">
+							<img src="img/home/offer-slider-1-mob.png" alt="#" />
+						</picture>
+					</div>
+					<div class="offer-home-slider__item-body">
+						<div class="offer-home-slider__item-title">
+							Мы создаём комфорт в вашем доме создаём<br> комфорт в вашем доме
+						</div>
+						<div class="offer-home-slider__item-box">
+							<div class="offer-home-slider__item-name">
+								Тумба “Тутанхомон”
+							</div>
+							<div class="offer-home-slider__item-price">
+								390 999 Р
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="offer-home-slider__slide swiper-slide">
+				<div class="offer-home-slider__item">
+					<div class="offer-home-slider__item-img">
+						<!-- Первая для пк версии -->
+						<picture>
+							<source srcset="img/home/offer-slider-1.webp" type="image/webp">
+							<img src="img/home/offer-slider-1.png" alt="#" />
+						</picture>
+						<!-- Вторая для моб версии, если нет моб версии то будет показывать пк версию -->
+						<picture>
+							<source srcset="img/home/offer-slider-1-mob.webp" type="image/webp">
+							<img src="img/home/offer-slider-1-mob.png" alt="#" />
+						</picture>
+					</div>
+					<div class="offer-home-slider__item-body">
+						<div class="offer-home-slider__item-title">
+							Мы создаём комфорт<br> в вашем доме
+						</div>
+						<div class="offer-home-slider__item-box">
+							<div class="offer-home-slider__item-name">
+								Тумба “Тутанхомон” Тумба “Тутанхомон”
+							</div>
+							<div class="offer-home-slider__item-price">
+								390 999 Р
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="offer-home-slider__prev">
+			<svg>
+				<use xlink:href="#chevron"></use>
+			</svg>
+		</div>
+		<div class="offer-home-slider__next">
+			<svg>
+				<use xlink:href="#chevron"></use>
+			</svg>
+		</div>
+		<div class="offer-home-slider__pagination"></div>
+	</div>
+</div>
+
+<div class="catalog-home">
+	<div class="catalog-home__title">
+		<h2>
+			Каталог
+		</h2>
+	</div>
+	<div class="catalog-home__top">
+		<div class="catalog-home__top-row">
+			<div class="catalog-home__top-col">
+				<a href="#" class="item-home-catalog">
+					<div class="item-home-catalog__img">
+						<picture>
+							<source srcset="img/home/catalog-1.webp" type="image/webp">
+							<img src="img/home/catalog-1.png" alt="#" />
+						</picture>
+					</div>
+					<div class="item-home-catalog__body">
+						<div class="item-home-catalog__name">
+							Комоды
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="catalog-home__top-col">
+				<a href="#" class="item-home-catalog">
+					<div class="item-home-catalog__img">
+						<picture>
+							<source srcset="img/home/catalog-2.webp" type="image/webp">
+							<img src="img/home/catalog-2.png" alt="#" />
+						</picture>
+					</div>
+					<div class="item-home-catalog__body">
+						<div class="item-home-catalog__name">
+							Тумбы
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="catalog-home__top-col">
+				<a href="#" class="item-home-catalog">
+					<div class="item-home-catalog__img">
+						<picture>
+							<source srcset="img/home/catalog-3.webp" type="image/webp">
+							<img src="img/home/catalog-3.png" alt="#" />
+						</picture>
+					</div>
+					<div class="item-home-catalog__body">
+						<div class="item-home-catalog__name">
+							Прикроватные тумбы
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="catalog-home__text" data-da=".catalog-home,991.98,0">
+				<div class="catalog-home__desc">
+					До той степени часто, что решились на отчаянный шаг — делать подобную мебель самостоятельно. Стиль в
+					простоте.
+				</div>
+			</div>
+			<div class="catalog-home__top-col-big">
+				<a href="#" class="item-home-catalog big">
+					<div class="item-home-catalog__img">
+						<picture>
+							<source srcset="img/home/catalog-4.webp" type="image/webp">
+							<img src="img/home/catalog-4.png" alt="#" />
+						</picture>
+					</div>
+					<div class="item-home-catalog__body">
+						<div class="item-home-catalog__name">
+							Подвесные тумбы
+						</div>
+						<div class="item-home-catalog__text">
+							И все оказалось максимально просто — не надо делать ярких цветов и сложных форм.
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="catalog-home__top-col-small">
+				<div class="catalog-home__items">
+					<div class="catalog-home__bottom-item">
+						<a href="#" class="item-home-catalog small">
+							<div class="item-home-catalog__img">
+								<picture>
+									<source srcset="img/home/catalog-1.webp" type="image/webp">
+									<img src="img/home/catalog-1.png" alt="#" />
+								</picture>
+							</div>
+							<div class="item-home-catalog__body">
+								<div class="item-home-catalog__name">
+									Тумбы
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="catalog-home__bottom-item">
+						<a href="#" class="item-home-catalog small">
+							<div class="item-home-catalog__img">
+								<picture>
+									<source srcset="img/home/catalog-2.webp" type="image/webp">
+									<img src="img/home/catalog-2.png" alt="#" />
+								</picture>
+							</div>
+							<div class="item-home-catalog__body">
+								<div class="item-home-catalog__name">
+									ТВ-тумбы
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="block-product">
+	
+</div>
 
 
 
 
+
+</div> <!-- end container -->
 </div> <!-- end main -->
 
 <footer class="footer">
 	<div class='container'>
-
+		<div class="footer__top">
+			<div class="footer__row">
+				<div class="footer__left">
+					<div class="footer__logo">
+						<img src="img/logo-footer.svg" alt="#" />
+					</div>
+				</div>
+				<div class="footer__right">
+					<div class="footer__body">
+						<div class="footer__items">
+							<div class="footer__item">
+								<div class="footer__title">
+									Каталог
+								</div>
+								<ul>
+									<li>
+										<a href="#">Комоды</a>
+									</li>
+									<li>
+										<a href="#">Тумбы</a>
+									</li>
+									<li>
+										<a href="#">Прикроватные тумбы</a>
+									</li>
+									<li>
+										<a href="#">ТВ-тумбы</a>
+									</li>
+									<li>
+										<a href="#">Стеллажи</a>
+									</li>
+									<li>
+										<a href="#">Подвесные тумбы</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__item">
+								<div class="footer__title">
+									Коллекции
+								</div>
+								<ul>
+									<li>
+										<a href="#">Один</a>
+									</li>
+									<li>
+										<a href="#">Амон Ра</a>
+									</li>
+									<li>
+										<a href="#">Тутенштейн</a>
+									</li>
+									<li>
+										<a href="#">Анубис</a>
+									</li>
+									<li>
+										<a href="#">Гор</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__item">
+								<div class="footer__title">
+									Информация
+								</div>
+								<ul>
+									<li>
+										<a href="#">Доставка и оплата</a>
+									</li>
+									<li>
+										<a href="#">Возврат товаров</a>
+									</li>
+									<li>
+										<a href="#">Шоурумы</a>
+									</li>
+									<li>
+										<a href="#">О компании</a>
+									</li>
+									<li>
+										<a href="#">Акции</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer__item">
+								<div class="footer__title">
+									Контакты
+								</div>
+								<div class="footer__text">
+									ул. Ленина д.22 офис 04
+								</div>
+								<div class="footer__text">
+									<a href="tel:88004533535">8 (800) 453 35 35</a>
+								</div>
+								<div class="footer__social">
+									<div class="social-block">
+										<a href="#" class="social-block__item" target="_blank">
+											<svg>
+												<use xlink:href="#vk"></use>
+											</svg>
+										</a>
+										<a href="#" class="social-block__item" target="_blank">
+											<svg>
+												<use xlink:href="#ok"></use>
+											</svg>
+										</a>
+										<a href="#" class="social-block__item" target="_blank">
+											<svg>
+												<use xlink:href="#tg"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="footer__images">
+				<div class="footer__img">
+					<img src="img/footer-label-1.svg" alt="#" />
+				</div>
+				<div class="footer__img">
+					<img src="img/footer-label-2.svg" alt="#" />
+				</div>
+				<div class="footer__img">
+					<img src="img/footer-label-3.svg" alt="#" />
+				</div>
+			</div>
+		</div>
 	</div>
 </footer>
 
@@ -1092,9 +1558,37 @@
 					</div>
 					<input type="tel" class="form-control" placeholder="Введите ваш телефон">
 				</div>
+				<div class="form-popup__text">
+					На номер +7 921 312 32 23 было<br> отправлено СМС с кодом
+				</div>
+				<div class="form-popup__text">
+					<a href="#">Изменить номер</a>
+				</div>
+				<div class="form-popup__text">
+					Введите код для продолжения
+				</div>
+				<div class="form-popup__inputs">
+					<div class="form-popup__input">
+						<input type="text" maxlength="1">
+					</div>
+					<div class="form-popup__input">
+						<input type="text" maxlength="1">
+					</div>
+					<div class="form-popup__input">
+						<input type="text" maxlength="1">
+					</div>
+					<div class="form-popup__input">
+						<input type="text" maxlength="1">
+					</div>
+				</div>
+				<div class="form-popup__btn">
+					<div class="form-popup__label">
+						Запросить код повторно через 2:00
+					</div>
+				</div>
 				<div class="form-popup__btn">
 					<button class="btn btn-black w-100">
-						Получить код по SMS
+						Зарегистрироваться
 					</button>
 				</div>
 			</form>

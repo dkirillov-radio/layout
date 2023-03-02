@@ -3,6 +3,28 @@ $.fancybox.defaults.autoFocus = false;
 $.fancybox.defaults.touch = false;
 
 
+function offerHomeSlider() {
+	let offerHomeSlider = new Swiper(".offer-home-slider.swiper-container", {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		loop: true,
+		observer: true,
+		observeParents: true,
+		watchOverflow: true,
+		touchReleaseOnEdges: true,
+		pagination: {
+			el: ".offer-home-slider__pagination",
+			clickable: true
+		},
+		navigation: {
+			nextEl: ".offer-home-slider__next",
+			prevEl: ".offer-home-slider__prev",
+		},
+	});
+}
+
+
+
 $(document).ready(function () {
 
 	$('input[type="tel"]').inputmask({ "mask": "+7(999) 999-9999" });
@@ -10,22 +32,33 @@ $(document).ready(function () {
 	const da = new DynamicAdapt("max");
 	da.init();
 	fixedHeader();
+
+	offerHomeSlider();
 })
 
+
+
+// js для фиксирования шапке ===================
 function fixedHeader() {
 	if ($(this).scrollTop() > $('.js-header-label').outerHeight()) {
 		$('.js-fixed-block').addClass('fixed');
 
 	} else {
 		$('.js-fixed-block').removeClass('fixed');
-
 	}
+	let headerBlock = $('.js-fixed-block').outerHeight();
+	$('.header').css('padding-bottom', headerBlock + 'px');
 }
 
 $(window).on('scroll', function () {
 	fixedHeader();
 
 });
+$(window).on('resize', function () {
+	fixedHeader();
+});
+// js для фиксирования шапке end ===================
+
 
 
 // js для поиска в шапке ===================
@@ -44,9 +77,10 @@ $(document).on('click', '.js-search', function (e) {
 		$('body').removeClass('lock');
 	}
 });
-// js для мобильного меню ===============
+// js для поиска в шапке end ===================
 
-// js для поиска в шапке ===================
+
+// js для мобильного меню ===============
 $(document).on('click', '.js-menu__btn', function () {
 	$('.js-menu').addClass('open');
 	$('.js-fixed-block').addClass('fixed');
@@ -82,4 +116,22 @@ $(document).on('click', '.js-spoiler-title', function () {
 		}
 	}
 });
- // spoiler end ===============================================
+// spoiler end ===============================================
+
+
+// Tabs start --------------------------
+$(document).on('mouseover', '.js-menu-catalog__item', function () {
+	let thisValueData = $(this).data('tab');
+	if (!$(this).hasClass('active')) {
+		$(this).parents('.js-menu-catalog').find('.js-menu-catalog__item').removeClass('active');
+		$(this).addClass('active');
+	}
+	let contentData = $(this).parents('.js-menu-catalog').find('.js-menu-catalog__body-item');
+	contentData.each(function () {
+		if ($(this).data('tab') == thisValueData) {
+			contentData.removeClass('active').hide();
+			$(this).addClass('active').show();
+		}
+	});
+});
+ // Tabs end --------------------------
