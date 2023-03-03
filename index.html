@@ -136,6 +136,10 @@
 		<path
 			d="M16.9192 10.317H15.0183C14.2992 10.317 14.0825 9.73446 12.7933 8.44446C11.6667 7.35863 11.1908 7.22363 10.9058 7.22363C10.5117 7.22363 10.4042 7.33196 10.4042 7.87446V9.58446C10.4042 10.047 10.2542 10.3178 9.04583 10.3178C7.87358 10.239 6.7368 9.88292 5.72914 9.27876C4.72148 8.6746 3.87177 7.83969 3.25 6.8428C1.77366 5.00532 0.746423 2.8487 0.25 0.544464C0.25 0.259464 0.358333 0.00113067 0.901667 0.00113067H2.80167C3.29 0.00113067 3.46583 0.218631 3.6575 0.721131C4.58 3.43613 6.15417 5.7978 6.79333 5.7978C7.03833 5.7978 7.145 5.68946 7.145 5.07863V2.28196C7.06417 1.00613 6.38667 0.898631 6.38667 0.436964C6.39524 0.315165 6.45095 0.201504 6.54198 0.120125C6.63301 0.0387455 6.75217 -0.00394167 6.87417 0.00113067H9.86083C10.2692 0.00113067 10.4042 0.204464 10.4042 0.692797V4.4678C10.4042 4.8753 10.5792 5.0103 10.7025 5.0103C10.9475 5.0103 11.1358 4.8753 11.585 4.42696C12.5478 3.25279 13.3344 1.9446 13.92 0.543631C13.9799 0.375425 14.0933 0.231443 14.2427 0.133645C14.3921 0.0358471 14.5694 -0.0103979 14.7475 0.00196394H16.6483C17.2183 0.00196394 17.3392 0.286964 17.2183 0.693631C16.527 2.24231 15.6715 3.71238 14.6667 5.07863C14.4617 5.39113 14.38 5.55363 14.6667 5.9203C14.855 6.2053 15.5217 6.76196 15.9692 7.29113C16.6208 7.94113 17.1617 8.6928 17.5708 9.51613C17.7342 10.0461 17.4617 10.317 16.9192 10.317Z" />
 	</symbol>
+	<symbol viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" id="basket-line">
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="M7.11721 2.37794C6.39647 2.91137 6 3.60823 6 4.33333V5.5H14V4.33333C14 3.61002 13.6046 2.91311 12.8846 2.37926C12.1647 1.84558 11.1466 1.5 10 1.5C8.85607 1.5 7.83782 1.84462 7.11721 2.37794ZM15 5.5V4.33333C15 3.21915 14.3885 2.24939 13.4801 1.57595C12.5715 0.902335 11.3396 0.5 10 0.5C8.66331 0.5 7.43156 0.901212 6.52232 1.57414C5.61322 2.24696 5 3.21677 5 4.33333V5.5H0.5V19.8333H19.5V5.5H15ZM14 6.5V7.66667C14 7.94281 14.2239 8.16667 14.5 8.16667C14.7761 8.16667 15 7.94281 15 7.66667V6.5H18.5V18.8333H1.5V6.5H5V7.66667C5 7.94281 5.22386 8.16667 5.5 8.16667C5.77614 8.16667 6 7.94281 6 7.66667V6.5H14Z" />
+	</symbol>
 </svg>
 <!--svg Sprite-->
 
@@ -210,11 +214,11 @@
 									<div class="header-center__actions">
 										<div class="header-center__action header-center__action-phone"
 											data-da=".header-center__box,991.97,1">
-											<div class="header-center__phone" data-da=".menu-categories__body,575.98,1">
+											<div class="header-center__phone" data-da=".menu-categories__body,639.98,1">
 												<a href="tel:88004533535">8 (800) 453 35 35</a>
 											</div>
 										</div>
-										<div class="header-center__action" data-da=".header-center__box,575.97,2">
+										<div class="header-center__action" data-da=".header-center__box,639.97,2">
 											<div class="header-action">
 												<a href="#login" data-fancybox="" class="header-action__top">
 													<svg>
@@ -268,7 +272,7 @@
 													</div>
 												</a>
 											</div>
-											<div class="catalog-menu__box open">
+											<div class="catalog-menu__box">
 												<div class="catalog-menu__wrap">
 													<div class="catalog-menu__boxes js-menu-catalog">
 														<div class="catalog-menu__level-1">
@@ -1122,9 +1126,961 @@
 	</div>
 </div>
 
-<div class="block-product">
-	
+<div class="block-product block-product-slider">
+	<div class="block-product__top">
+		<div class="block-product__left">
+			<div class="block-product__title">
+				<h2>
+					Хиты продаж
+				</h2>
+			</div>
+		</div>
+		<div class="block-product__right">
+			<div class="block-product__nav">
+				<div class="block-product__prev slider-product__prev slider-prev">
+					<svg>
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</div>
+				<div class="block-product__next slider-product__next slider-next">
+					<svg>
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="block-product__links">
+		<a href="#" class="block-product__link active">
+			Все идеи
+		</a>
+		<a href="#" class="block-product__link">
+			Гостиная
+		</a>
+		<a href="#" class="block-product__link">
+			Детская комната
+		</a>
+		<a href="#" class="block-product__link">
+			Спальня
+		</a>
+		<a href="#" class="block-product__link">
+			Студия
+		</a>
+	</div>
+	<div class="slider-product swiper-container">
+		<div class="slider-product__wrapper swiper-wrapper">
+			<div class="slider-product__slide swiper-slide">
+				<div class="item-product">
+					<div class="item-product__overlay"></div>
+					<div class="item-product__box">
+						<div class="item-product__top">
+							<div class="item-product__label">
+								-20 %
+							</div>
+							<div class="item-product__action">
+								<svg>
+									<use xlink:href="#heart"></use>
+								</svg>
+							</div>
+							<div class="item-product__date-mob">
+								Доставка 29 января
+							</div>
+							<a href="#" class="item-product__img">
+								<picture>
+									<source srcset="img/home/catalog-4.png" type="image/webp">
+									<img src="img/home/catalog-4.png" alt="#" />
+								</picture>
+							</a>
+						</div>
+						<div class="item-product__body">
+							<div class="item-product__name">
+								<a href="#">Прикроватная тумба Рамзес Великий </a>
+							</div>
+							<div class="item-product__text">
+								Коричневый/белый, 50 х 40 х 48 см
+							</div>
+							<div class="item-product__colection">
+								Коллекция Амон Ра
+							</div>
+							<div class="item-product__row">
+								<div class="item-product__left">
+									<div class="item-product__prices">
+										<div class="item-product__price">
+											110 000 ₽
+										</div>
+										<div class="item-product__price-old">
+											110 000 ₽
+										</div>
+									</div>
+								</div>
+								<div class="item-product__center">
+									<div class="item-product__date">
+										Доставка 29 января
+									</div>
+								</div>
+								<div class="item-product__right">
+									<div class="item-product__buttons">
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn">
+												В корзину
+												<svg>
+													<use xlink:href="#basket-line"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn-link">Подробнее о товаре</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-product__slide swiper-slide">
+				<div class="item-product">
+					<div class="item-product__overlay"></div>
+					<div class="item-product__box">
+						<div class="item-product__top">
+							<div class="item-product__label">
+								-20 %
+							</div>
+							<div class="item-product__action">
+								<svg>
+									<use xlink:href="#heart"></use>
+								</svg>
+							</div>
+							<div class="item-product__date-mob">
+								Доставка 29 января
+							</div>
+							<a href="#" class="item-product__img">
+								<picture>
+									<source srcset="img/home/catalog-4.png" type="image/webp">
+									<img src="img/home/catalog-4.png" alt="#" />
+								</picture>
+							</a>
+						</div>
+						<div class="item-product__body">
+							<div class="item-product__name">
+								<a href="#">Прикроватная тумба Рамзес Великий </a>
+							</div>
+							<div class="item-product__text">
+								Коричневый/белый, 50 х 40 х 48 см
+							</div>
+							<div class="item-product__colection">
+								Коллекция Амон Ра
+							</div>
+							<div class="item-product__row">
+								<div class="item-product__left">
+									<div class="item-product__prices">
+										<div class="item-product__price">
+											110 000 ₽
+										</div>
+										<div class="item-product__price-old">
+											110 000 ₽
+										</div>
+									</div>
+								</div>
+								<div class="item-product__center">
+									<div class="item-product__date">
+										Доставка 29 января
+									</div>
+								</div>
+								<div class="item-product__right">
+									<div class="item-product__buttons">
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn">
+												В корзину
+												<svg>
+													<use xlink:href="#basket-line"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn-link">Подробнее о товаре</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-product__slide swiper-slide">
+				<div class="item-product">
+					<div class="item-product__overlay"></div>
+					<div class="item-product__box">
+						<div class="item-product__top">
+							<div class="item-product__label">
+								-20 %
+							</div>
+							<div class="item-product__action">
+								<svg>
+									<use xlink:href="#heart"></use>
+								</svg>
+							</div>
+							<div class="item-product__date-mob">
+								Доставка 29 января
+							</div>
+							<a href="#" class="item-product__img">
+								<picture>
+									<source srcset="img/home/catalog-4.png" type="image/webp">
+									<img src="img/home/catalog-4.png" alt="#" />
+								</picture>
+							</a>
+						</div>
+						<div class="item-product__body">
+							<div class="item-product__name">
+								<a href="#">Прикроватная тумба Рамзес Великий </a>
+							</div>
+							<div class="item-product__text">
+								Коричневый/белый, 50 х 40 х 48 см
+							</div>
+							<div class="item-product__colection">
+								Коллекция Амон Ра
+							</div>
+							<div class="item-product__row">
+								<div class="item-product__left">
+									<div class="item-product__prices">
+										<div class="item-product__price">
+											110 000 ₽
+										</div>
+										<div class="item-product__price-old">
+											110 000 ₽
+										</div>
+									</div>
+								</div>
+								<div class="item-product__center">
+									<div class="item-product__date">
+										Доставка 29 января
+									</div>
+								</div>
+								<div class="item-product__right">
+									<div class="item-product__buttons">
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn">
+												В корзину
+												<svg>
+													<use xlink:href="#basket-line"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn-link">Подробнее о товаре</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-product__slide swiper-slide">
+				<div class="item-product">
+					<div class="item-product__overlay"></div>
+					<div class="item-product__box">
+						<div class="item-product__top">
+							<div class="item-product__label">
+								-20 %
+							</div>
+							<div class="item-product__action">
+								<svg>
+									<use xlink:href="#heart"></use>
+								</svg>
+							</div>
+							<div class="item-product__date-mob">
+								Доставка 29 января
+							</div>
+							<a href="#" class="item-product__img">
+								<picture>
+									<source srcset="img/home/catalog-4.png" type="image/webp">
+									<img src="img/home/catalog-4.png" alt="#" />
+								</picture>
+							</a>
+						</div>
+						<div class="item-product__body">
+							<div class="item-product__name">
+								<a href="#">Прикроватная тумба Рамзес Великий </a>
+							</div>
+							<div class="item-product__text">
+								Коричневый/белый, 50 х 40 х 48 см
+							</div>
+							<div class="item-product__colection">
+								Коллекция Амон Ра
+							</div>
+							<div class="item-product__row">
+								<div class="item-product__left">
+									<div class="item-product__prices">
+										<div class="item-product__price">
+											110 000 ₽
+										</div>
+									</div>
+								</div>
+								<div class="item-product__center">
+									<div class="item-product__date">
+										Доставка 29 января
+									</div>
+								</div>
+								<div class="item-product__right">
+									<div class="item-product__buttons">
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn">
+												В корзину
+												<svg>
+													<use xlink:href="#basket-line"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn-link">Подробнее о товаре</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-product__slide swiper-slide">
+				<div class="item-product">
+					<div class="item-product__overlay"></div>
+					<div class="item-product__box">
+						<div class="item-product__top">
+							<div class="item-product__label">
+								-20 %
+							</div>
+							<div class="item-product__action">
+								<svg>
+									<use xlink:href="#heart"></use>
+								</svg>
+							</div>
+							<div class="item-product__date-mob">
+								Доставка 29 января
+							</div>
+							<a href="#" class="item-product__img">
+								<picture>
+									<source srcset="img/home/catalog-4.png" type="image/webp">
+									<img src="img/home/catalog-4.png" alt="#" />
+								</picture>
+							</a>
+						</div>
+						<div class="item-product__body">
+							<div class="item-product__name">
+								<a href="#">Прикроватная тумба Рамзес Великий </a>
+							</div>
+							<div class="item-product__text">
+								Коричневый/белый, 50 х 40 х 48 см
+							</div>
+							<div class="item-product__colection">
+								Коллекция Амон Ра
+							</div>
+							<div class="item-product__row">
+								<div class="item-product__left">
+									<div class="item-product__prices">
+										<div class="item-product__price">
+											110 000 ₽
+										</div>
+										<div class="item-product__price-old">
+											110 000 ₽
+										</div>
+									</div>
+								</div>
+								<div class="item-product__center">
+									<div class="item-product__date">
+										Доставка 29 января
+									</div>
+								</div>
+								<div class="item-product__right">
+									<div class="item-product__buttons">
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn">
+												В корзину
+												<svg>
+													<use xlink:href="#basket-line"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn-link">Подробнее о товаре</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-product__slide swiper-slide">
+				<div class="item-product">
+					<div class="item-product__overlay"></div>
+					<div class="item-product__box">
+						<div class="item-product__top">
+							<div class="item-product__label">
+								-20 %
+							</div>
+							<div class="item-product__action">
+								<svg>
+									<use xlink:href="#heart"></use>
+								</svg>
+							</div>
+							<div class="item-product__date-mob">
+								Доставка 29 января
+							</div>
+							<a href="#" class="item-product__img">
+								<picture>
+									<source srcset="img/home/catalog-4.png" type="image/webp">
+									<img src="img/home/catalog-4.png" alt="#" />
+								</picture>
+							</a>
+						</div>
+						<div class="item-product__body">
+							<div class="item-product__name">
+								<a href="#">Прикроватная тумба Рамзес Великий </a>
+							</div>
+							<div class="item-product__text">
+								Коричневый/белый, 50 х 40 х 48 см
+							</div>
+							<div class="item-product__colection">
+								Коллекция Амон Ра
+							</div>
+							<div class="item-product__row">
+								<div class="item-product__left">
+									<div class="item-product__prices">
+										<div class="item-product__price">
+											110 000 ₽
+										</div>
+										<div class="item-product__price-old">
+											110 000 ₽
+										</div>
+									</div>
+								</div>
+								<div class="item-product__center">
+									<div class="item-product__date">
+										Доставка 29 января
+									</div>
+								</div>
+								<div class="item-product__right">
+									<div class="item-product__buttons">
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn">
+												В корзину
+												<svg>
+													<use xlink:href="#basket-line"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn-link">Подробнее о товаре</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-product__slide swiper-slide">
+				<div class="item-product">
+					<div class="item-product__overlay"></div>
+					<div class="item-product__box">
+						<div class="item-product__top">
+							<div class="item-product__label">
+								-20 %
+							</div>
+							<div class="item-product__action">
+								<svg>
+									<use xlink:href="#heart"></use>
+								</svg>
+							</div>
+							<div class="item-product__date-mob">
+								Доставка 29 января
+							</div>
+							<a href="#" class="item-product__img">
+								<picture>
+									<source srcset="img/home/catalog-4.png" type="image/webp">
+									<img src="img/home/catalog-4.png" alt="#" />
+								</picture>
+							</a>
+						</div>
+						<div class="item-product__body">
+							<div class="item-product__name">
+								<a href="#">Прикроватная тумба Рамзес Великий </a>
+							</div>
+							<div class="item-product__text">
+								Коричневый/белый, 50 х 40 х 48 см
+							</div>
+							<div class="item-product__colection">
+								Коллекция Амон Ра
+							</div>
+							<div class="item-product__row">
+								<div class="item-product__left">
+									<div class="item-product__prices">
+										<div class="item-product__price">
+											110 000 ₽
+										</div>
+										<div class="item-product__price-old">
+											110 000 ₽
+										</div>
+									</div>
+								</div>
+								<div class="item-product__center">
+									<div class="item-product__date">
+										Доставка 29 января
+									</div>
+								</div>
+								<div class="item-product__right">
+									<div class="item-product__buttons">
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn">
+												В корзину
+												<svg>
+													<use xlink:href="#basket-line"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn-link">Подробнее о товаре</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-product__slide swiper-slide">
+				<div class="item-product">
+					<div class="item-product__overlay"></div>
+					<div class="item-product__box">
+						<div class="item-product__top">
+							<div class="item-product__label">
+								-20 %
+							</div>
+							<div class="item-product__action">
+								<svg>
+									<use xlink:href="#heart"></use>
+								</svg>
+							</div>
+							<div class="item-product__date-mob">
+								Доставка 29 января
+							</div>
+							<a href="#" class="item-product__img">
+								<picture>
+									<source srcset="img/home/catalog-4.png" type="image/webp">
+									<img src="img/home/catalog-4.png" alt="#" />
+								</picture>
+							</a>
+						</div>
+						<div class="item-product__body">
+							<div class="item-product__name">
+								<a href="#">Прикроватная тумба Рамзес Великий </a>
+							</div>
+							<div class="item-product__text">
+								Коричневый/белый, 50 х 40 х 48 см
+							</div>
+							<div class="item-product__colection">
+								Коллекция Амон Ра
+							</div>
+							<div class="item-product__row">
+								<div class="item-product__left">
+									<div class="item-product__prices">
+										<div class="item-product__price">
+											110 000 ₽
+										</div>
+									</div>
+								</div>
+								<div class="item-product__center">
+									<div class="item-product__date">
+										Доставка 29 января
+									</div>
+								</div>
+								<div class="item-product__right">
+									<div class="item-product__buttons">
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn">
+												В корзину
+												<svg>
+													<use xlink:href="#basket-line"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="item-product__buttons-item">
+											<a href="#" class="item-product__btn-link">Подробнее о товаре</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-product__pagination slider-pagination"></div>
+	</div>
 </div>
+
+<div class="new-product-home">
+	<div class="new-product-home__title">
+		<h2>Новинки</h2>
+	</div>
+</div>
+
+<div class="collections-home">
+	<div class="collections-home__title">
+		<h2>
+			Наши коллекции
+		</h2>
+	</div>
+	<div class="collections-home__row">
+		<div class="collections-home__col">
+			<div class="collections-home__item">
+				<div class="collections-home__img">
+					<picture>
+						<source srcset="img/home/colection-1.webp" type="image/webp">
+						<img src="img/home/colection-1.png" alt="#" />
+					</picture>
+				</div>
+				<a href="#" class="collections-home__overlay">
+					<div class="collections-home__images">
+						<picture>
+							<source srcset="img/home/colection-1.webp" type="image/webp">
+							<img src="img/home/colection-1.png" alt="#" />
+						</picture>
+					</div>
+					<div class="collections-home__name">
+						Тумбы
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="collections-home__col big">
+			<div class="collections-home__item">
+				<div class="collections-home__img">
+					<picture>
+						<source srcset="img/home/colection-2.webp" type="image/webp">
+						<img src="img/home/colection-2.png" alt="#" />
+					</picture>
+				</div>
+				<a href="#" class="collections-home__overlay">
+					<div class="collections-home__images">
+						<picture>
+							<source srcset="img/home/colection-2.webp" type="image/webp">
+							<img src="img/home/colection-2.png" alt="#" />
+						</picture>
+					</div>
+					<div class="collections-home__name">
+						Прикроватные тумбы
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="collections-home__col">
+			<div class="collections-home__item">
+				<div class="collections-home__img">
+					<picture>
+						<source srcset="img/home/colection-3.webp" type="image/webp">
+						<img src="img/home/colection-3.png" alt="#" />
+					</picture>
+				</div>
+				<a href="#" class="collections-home__overlay">
+					<div class="collections-home__images">
+						<picture>
+							<source srcset="img/home/colection-3.webp" type="image/webp">
+							<img src="img/home/colection-3.png" alt="#" />
+						</picture>
+					</div>
+					<div class="collections-home__name">
+						Тумбы
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="collections-home__col">
+			<div class="collections-home__item">
+				<div class="collections-home__img">
+					<picture>
+						<source srcset="img/home/colection-4.webp" type="image/webp">
+						<img src="img/home/colection-4.png" alt="#" />
+					</picture>
+				</div>
+				<a href="#" class="collections-home__overlay">
+					<div class="collections-home__images">
+						<picture>
+							<source srcset="img/home/colection-4.webp" type="image/webp">
+							<img src="img/home/colection-4.png" alt="#" />
+						</picture>
+					</div>
+					<div class="collections-home__name">
+						Тумбы
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="collections-home__col">
+			<div class="collections-home__item">
+				<div class="collections-home__img">
+					<picture>
+						<source srcset="img/home/colection-5.webp" type="image/webp">
+						<img src="img/home/colection-5.png" alt="#" />
+					</picture>
+				</div>
+				<a href="#" class="collections-home__overlay">
+					<div class="collections-home__images">
+						<picture>
+							<source srcset="img/home/colection-5.webp" type="image/webp">
+							<img src="img/home/colection-5.png" alt="#" />
+						</picture>
+					</div>
+					<div class="collections-home__name">
+						Тумбы
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="reviews-home">
+	<div class="reviews-home__top">
+		<div class="reviews-home__left">
+			<div class="reviews-home__title">
+				<h2>
+					Отзывы
+				</h2>
+			</div>
+		</div>
+		<div class="reviews-home__right">
+			<div class="reviews-home__nav">
+				<div class="reviews-home__prev reviews-slider__prev slider-prev">
+					<svg>
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</div>
+				<div class="reviews-home__next reviews-slider__next slider-next">
+					<svg>
+						<use xlink:href="#arrow"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="reviews-slider swiper-container">
+		<div class="reviews-slider__wrapper swiper-wrapper">
+			<div class="reviews-slider__slide swiper-slide">
+				<div class="reviews-item">
+					<div class="reviews-item__body">
+						<div class="reviews-item__top">
+							<div class="reviews-item__name">
+								Анастасия
+							</div>
+							<div class="reviews-item__grade">
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="reviews-item__text">
+							Спасибо большое за ваш продукт, купила тумбу и очень довольна покупкой. Понятная инструкция.
+						</div>
+						<div class="reviews-item__date">
+							25.12.2022
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-slider__slide swiper-slide">
+				<div class="reviews-item">
+					<div class="reviews-item__body">
+						<div class="reviews-item__top">
+							<div class="reviews-item__name">
+								Анастасия
+							</div>
+							<div class="reviews-item__grade">
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="reviews-item__text">
+							Спасибо большое за ваш продукт, купила тумбу и очень довольна покупкой. Понятная инструкция.
+						</div>
+						<div class="reviews-item__date">
+							25.12.2022
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-slider__slide swiper-slide">
+				<div class="reviews-item">
+					<div class="reviews-item__body">
+						<div class="reviews-item__top">
+							<div class="reviews-item__name">
+								Анастасия
+							</div>
+							<div class="reviews-item__grade">
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="reviews-item__text">
+							Спасибо большое за ваш продукт, купила тумбу и очень довольна покупкой. Понятная инструкция. купила
+							тумбу и очень довольна покупкой. Понятная инструкция.
+						</div>
+						<div class="reviews-item__date">
+							25.12.2022
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-slider__slide swiper-slide">
+				<div class="reviews-item">
+					<div class="reviews-item__body">
+						<div class="reviews-item__top">
+							<div class="reviews-item__name">
+								Анастасия
+							</div>
+							<div class="reviews-item__grade">
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="reviews-item__text">
+							Спасибо большое за ваш продукт, купила тумбу и очень довольна покупкой. Понятная инструкция.
+						</div>
+						<div class="reviews-item__date">
+							25.12.2022
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-slider__slide swiper-slide">
+				<div class="reviews-item">
+					<div class="reviews-item__body">
+						<div class="reviews-item__top">
+							<div class="reviews-item__name">
+								Анастасия
+							</div>
+							<div class="reviews-item__grade">
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star-fill"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#star"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="reviews-item__text">
+							Спасибо большое за ваш продукт, купила тумбу и очень довольна покупкой. Понятная инструкция.
+						</div>
+						<div class="reviews-item__date">
+							25.12.2022
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="about-home">
+	<div class="about-home__title">
+		<h2>
+			О компании
+		</h2>
+	</div>
+	<div class="about-home__row">
+		<div class="about-home__col">
+			<div class="about-home__desc">
+				<p>
+					Как часто вы смотрите на тумбочку и у вас возникает мысль, что вы хотели бы такую же,
+					но с «перламутровыми пуговицами», чтобы по стилю она подошла бы к Вашему шкафу или кровати? Мы — очень
+					часто. До той степени часто, что решились на отчаянный шаг — делать подобную мебель самостоятельно.
+				</p>
+				<p>
+					И у нас это получилось. И все оказалось максимально просто — не надо делать ярких цветов и сложных форм.
+					Стиль в простоте. Берём обычную кубическую форму, собираем её из качественных материалов в спокойных
+					цветах, затем берём стильный фасад в контрастном цвете. И идеальная тумба готова. Осталось только
+					поставить её на надёжные ножки и оборудовать качественными петлями, чтобы от хлопка дверцы не просыпались
+					соседи. И вот он идеальный рецепт идеальной тумбы для любого назначения и любой комнаты.
+				</p>
+			</div>
+		</div>
+		<div class="about-home__col">
+			<div class="about-home__desc">
+				<p>
+					У нас нет вензелей и блестящих ручек, нет сложных рисунков на фасадах и ярких кричащих цветов. Мы очень
+					хотели сделать мебель, которую можно поставить в спальню рядом с кроватью, а через год передвинуть
+					её в гостиную и пристроить рядом с телевизором. И нам очень хотелось, чтобы на любом месте и в любой
+					комнате наша мебель гармонично встроилась бы в интерьер.
+				</p>
+				<div class="about-home__link">
+					<a href="#">Подробнее</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
 

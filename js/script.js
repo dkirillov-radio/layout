@@ -12,6 +12,7 @@ function offerHomeSlider() {
 		observeParents: true,
 		watchOverflow: true,
 		touchReleaseOnEdges: true,
+		speed: 1000,
 		pagination: {
 			el: ".offer-home-slider__pagination",
 			clickable: true
@@ -22,6 +23,71 @@ function offerHomeSlider() {
 		},
 	});
 }
+function blockProductSlider() {
+	let prev, next;
+	$(".slider-product.swiper-container").each(function (index, value) {
+		prev = $(value).parents('.block-product-slider').find('.slider-product__prev')[0];
+		next = $(value).parents('.block-product-slider').find('.slider-product__next')[0];
+		let blockProductSlider = new Swiper(value, {
+			slidesPerView: 1.20,
+			spaceBetween: 20,
+			loop: false,
+			observer: true,
+			observeParents: true,
+			watchOverflow: true,
+			touchReleaseOnEdges: true,
+			pagination: {
+				el: ".slider-product__pagination",
+				type: 'progressbar'
+			},
+			navigation: {
+				nextEl: next,
+				prevEl: prev,
+			},
+			breakpoints: {
+				640: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				1200: {
+					slidesPerView: 3,
+					spaceBetween: 16,
+				}
+			}
+		});
+	});
+}
+function reviewsSlider() {
+	let prev, next;
+	$(".reviews-slider.swiper-container").each(function (index, value) {
+		prev = $(value).parents('.reviews-home').find('.reviews-slider__prev')[0];
+		next = $(value).parents('.reviews-home').find('.reviews-slider__next')[0];
+		let reviewsSlider = new Swiper(value, {
+			slidesPerView: 1.25,
+			spaceBetween: 16,
+			loop: false,
+			observer: true,
+			observeParents: true,
+			watchOverflow: true,
+			touchReleaseOnEdges: true,
+			navigation: {
+				nextEl: next,
+				prevEl: prev,
+			},
+			breakpoints: {
+				640: {
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				1200: {
+					slidesPerView: 3,
+					spaceBetween: 16,
+				}
+			}
+		});
+	});
+}
+
 
 
 
@@ -34,6 +100,8 @@ $(document).ready(function () {
 	fixedHeader();
 
 	offerHomeSlider();
+	blockProductSlider();
+	reviewsSlider();
 })
 
 
