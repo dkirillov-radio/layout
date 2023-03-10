@@ -7,7 +7,9 @@
 	<link rel="stylesheet" href="plugins/swiper/swiper.min.css">
 	<link rel="stylesheet" href="plugins/fancybox/fancybox.css">
 	<link rel="stylesheet" href="plugins/simplebar/simplebar.css">
+	<link rel="stylesheet" href="plugins/noUiSlider/nouislider.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/main.css">
 	<title>Главная</title>
 </head>
 
@@ -941,7 +943,71 @@
 		</div>
 	</div>
 </div>
-
+	<div class="main-card-info js-card-info">
+		<div class='container'>
+			<div class="main-card-info__row">
+				<div class="main-card-info__left">
+					<div class="main-card-info__body">
+						<div class="main-card-info__title">
+							Прикроватная тумба Рамзес Великий
+						</div>
+						<div class="main-card-info__line">
+							<div class="main-card-info__text">
+								Коричневый/белый, 50 х 40 х 48 см
+							</div>
+							<div class="main-card-info__code">
+								Артикул
+								<span>312323</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main-card-info__center">
+					<div class="main-card-info__box">
+						<div class="main-card-info__price-old">
+							10 700 ₽
+						</div>
+						<div class="main-card-info__prices">
+							<div class="main-card-info__price">
+								10 700 ₽
+							</div>
+							<div class="main-card-info__label">
+								-20 %
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main-card-info__info">
+					<div class="main-card-info__date">
+						Доставка: 29 января
+					</div>
+				</div>
+				<div class="main-card-info__right">
+					<div class="main-card-info__actions">
+						<div class="main-card-info__action">
+							<div class="card-body-bottom__btn js-small-basket__btn">
+								Добавить в корзину
+								<svg>
+									<use xlink:href="#basket-line"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="main-card-info__action">
+							<!-- Для смени вида сердечка нужно добавить класс active -->
+							<a href="#" class="card-body-bottom__btn-favorite">
+								<svg>
+									<use xlink:href="#heart"></use>
+								</svg>
+								<svg>
+									<use xlink:href="#heart-fill"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="main-card" data-sticky-container>
 		<div class="main-card__body">
 			<div class="main-card__row">
@@ -995,8 +1061,8 @@
 					</div>
 				</div>
 				<div class="main-card__right">
-					<div class="card-body " data-sticky-wrap="true" data-sticky-class="is-sticky" data-margin-top="150px"
-						data-sticky-for="991.98">
+					<div class="card-body ">
+
 						<div class="card-body__top" data-da=".main-card__body,991.97,0">
 							<div class="card-body__top-line">
 								<div class="card-body__top-block">
@@ -1137,8 +1203,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="card-body__spoiler">
-							<div class="card-spoiler js-spoiler">
+
+						<div class="card-body__spoiler js-card-desc">
+							<div class="card-spoiler js-spoiler js-sticky-block" data-sticky-wrap="true"
+								data-sticky-class="is-sticky" data-margin-top="135px" data-sticky-for="991.98">
 								<div class="card-spoiler__item active js-spoiler-item">
 									<div class="card-spoiler__title js-spoiler-title">
 										<div class="card-spoiler__heading">
@@ -1617,6 +1685,7 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="card-body__bottom">
 							<div class="card-body-bottom">
 								<div class="card-body-bottom__row">
@@ -1655,6 +1724,65 @@
 								</div>
 							</div>
 						</div>
+						<!-- <div class="card-body__wrapper js-sticky-block" data-sticky-wrap="true" data-sticky-class="is-sticky"
+							data-margin-top="135px" data-sticky-for="991.98">
+							<div class="card-body__top" data-da=".main-card__body,991.97,0">
+								<div class="card-body__top-title">
+									<h1>
+										Прикроватная тумба Рамзес Великий
+									</h1>
+								</div>
+								<div class="card-body__top-row">
+									<div class="card-body__top-text">
+										Коричневый/белый, 50 х 40 х 48 см
+									</div>
+									<div class="card-body__top-code">
+										Артикул 312323
+									</div>
+								</div>
+							</div>
+							<div class="card-body__center">
+								<div class="card-body-center">
+									<div class="card-body-center__price-old">
+										<span>10 700 ₽ </span>
+									</div>
+									<div class="card-body-center__line">
+										<div class="card-body-center__price">
+											10 700 ₽
+										</div>
+										<div class="card-body-center__label">
+											-20 %
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-body__bottom">
+								<div class="card-body-bottom">
+									<div class="card-body-bottom__row">
+										<div class="card-body-bottom__col">
+											<div class="card-body-bottom__btn js-small-basket__btn">
+												Добавить в корзину
+												<svg>
+													<use xlink:href="#basket-line"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="card-body-bottom__col">
+											 Для смени вида сердечка нужно добавить класс active
+											<a href="#" class="card-body-bottom__btn-favorite">
+												<svg>
+													<use xlink:href="#heart"></use>
+												</svg>
+												<svg>
+													<use xlink:href="#heart-fill"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>   -->
+
 					</div>
 				</div>
 			</div>
@@ -3948,10 +4076,12 @@
 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/dynamicAdapt.js"></script>
+<script src="js/wNumb.min.js"></script>
 <script src="plugins/swiper/swiper.min.js"></script>
 <script src="plugins/fancybox/fancybox.umd.js"></script>
 <script src="plugins/simplebar/simplebar.js"></script>
 <script src="plugins/inputmask/jquery.inputmask.js"></script>
+<script src="plugins/noUiSlider/nouislider.min.js"></script>
 <script src="js/sticky.min.js"></script>
 <script src="js/script.js"></script>
 

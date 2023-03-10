@@ -242,7 +242,15 @@ function auto_grow(element) {
 $(document).ready(function () {
 
 
-	var sticky = new Sticky('.js-sticky-block');
+	let sticky = new Sticky('.js-sticky-block');
+
+	$(document).on('click', '.js-spoiler-title', function () {
+		if ($('.js-sticky-block').length) {
+			setTimeout(function () {
+				sticky.update();
+			}, 400);
+		}
+	});
 
 	$('input[type="tel"]').inputmask({ "mask": "+7(999) 999-9999" });
 
@@ -257,11 +265,12 @@ $(document).ready(function () {
 	cardSlider();
 	galleryPopup();
 	colectionDetailSlider();
+	fixedCardInfo();
 })
 
 
 
-// js для фиксирования шапке ===================
+// js для фиксирования шапки ===================
 function fixedHeader() {
 	if ($(this).scrollTop() > $('.js-header-label').outerHeight()) {
 		$('.js-fixed-block').addClass('fixed');
@@ -272,15 +281,34 @@ function fixedHeader() {
 	let headerBlock = $('.js-fixed-block').outerHeight();
 	$('.header').css('padding-bottom', headerBlock + 'px');
 }
+// js для фиксирования шапки end ===================
+
+// js для фиксирования информации в карточке товара ===================
+function fixedCardInfo() {
+	if ($('.js-card-info').length) {
+		let positionTop = $('.header-center').outerHeight() - 1;
+		let positionBottom = $('.main-card').offset().top + $('.main-card').outerHeight();
+		let descPosition = $('.js-card-desc').offset().top - $('.js-fixed-block').outerHeight() - 20;
+		if ($(window).scrollTop() > descPosition) {
+			$('.js-card-info').addClass('open').css('top', positionTop + 'px')
+		} else {
+			$('.js-card-info').removeClass('open').css('top', 0);
+		}
+	}
+
+}
+// js для фиксирования информации в карточке товара end ===================
+
 
 $(window).on('scroll', function () {
 	fixedHeader();
-
+	fixedCardInfo();
 });
 $(window).on('resize', function () {
 	fixedHeader();
+	fixedCardInfo();
 });
-// js для фиксирования шапке end ===================
+
 
 
 
@@ -399,3 +427,87 @@ $(document).on('click', '.js-gallery-popup__close', function () {
 	$('body').removeClass('lock');
 });
 // popup галереи в карточке товара end --------------------------
+
+
+
+$(document).on('click', '.js-block-btn', function () {
+	if (!$(this).hasClass('open')) {
+		$('.js-block-body').removeClass('open');
+		$('.js-block-btn').removeClass('open');
+		$(this).addClass('open');
+		$(this).parents('.js-block').find('.js-block-body').addClass('open');
+	} else {
+		$(this).removeClass('open');
+		$(this).parents('.js-block').find('.js-block-body').removeClass('open');
+	}
+});
+
+$(document).on('click', '.js-block-close', function () {
+	$(this).parents('.js-block').find('.js-block-btn').removeClass('open');
+	$(this).parents('.js-block').find('.js-block-body').removeClass('open');
+});
+
+// Скрипт для слайдеров в фильтрах --------------------------
+if ($('.js-slider-noui-slider').length) {
+	$('.js-slider-noui-slider').each(function (index, value) {
+		let from = $(value).parents('.js-slider-noui').find('.js-slider-noui-from');
+		let to = $(value).parents('.js-slider-noui').find('.js-slider-noui-to');
+		let min = $(value).data('min');
+		let max = $(value).data('max');
+		noUiSlider.create(value, {
+			start: [min, max],
+			connect: true,
+			step: 1,
+			range: {
+				'min': min,
+				'max': max
+			},
+			format: wNumb({
+				decimals: 0,
+				thousand: ' ',
+			}),
+		}).on('update', function (values, handle, unencoded) {
+			$(value).parents('.js-slider-noui').find('.js-slider-noui-from').val(values[0]);
+			$(value).parents('.js-slider-noui').find('.js-slider-noui-to').val(values[1]);
+		});
+
+		$(from).on('change', function () {
+			let parent = $(this).parents('.js-slider-noui');
+			let to = $(value).find('.js-slider-noui-to').val();
+			value.noUiSlider.set([$(this).val(), to]);
+		});
+		$(to).on('change', function () {
+			let parent = $(this).parents('.js-slider-noui');
+			let from = $(parent).find('.js-slider-noui-from').val();
+			value.noUiSlider.set([from, $(this).val()]);
+		});
+	});
+}
+// Скрипт для слайдеров в фильтрах end --------------------------
+
+// popup фильтра start --------------------------
+$(document).on('click', '.js-popup-filter__btn', function () {
+	$('.js-popup-filter').addClass('open');
+	$('body').addClass('lock');
+});
+$(document).on('click', '.js-popup-filter__close', function () {
+	$(this).parents('.js-popup-filter').removeClass('open');
+	$('body').removeClass('lock');
+});
+$(document).on('click', '.js-popup-filter', function (e) {
+	if (!$(e.target).closest('.js-popup-filter__body').length && !$(e.target).closest('.js-popup-filter__btn').length) {
+		$('.js-popup-filter').removeClass('open');
+		$('body').removeClass('lock');
+	}
+});
+// popup фильтра end --------------------------
+
+$(document).on('click', '.js-block-filter__btn', function () {
+	if (!$(this).hasClass('open')) {
+		$(this).addClass('open');
+		$(this).parents('.js-block-filter').addClass('open');
+	} else {
+		$(this).removeClass('open');
+		$(this).parents('.js-block-filter').removeClass('open');
+	}
+});
