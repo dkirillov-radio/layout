@@ -511,3 +511,28 @@ $(document).on('click', '.js-block-filter__btn', function () {
 		$(this).parents('.js-block-filter').removeClass('open');
 	}
 });
+
+
+// Показ карты для страницы Адреса магазинов start --------------------------
+$(document).on('click', '.js-map-block__btn', function () {
+	if (!$(this).hasClass('open')) {
+		$(this).addClass('open');
+		$(this).parents('.js-map-block').addClass('open');
+	} else {
+		$(this).removeClass('open');
+		$(this).parents('.js-map-block').removeClass('open');
+	}
+});
+// Показ карты для страницы Адреса магазинов end --------------------------
+
+
+// Детальный просмотр заказа start --------------------------
+$(document).on('click', '.js-item-order__btn', function () {
+	if (!$(this).parents('.js-item-order').hasClass('open')) {
+		$(this).parents('.js-item-order').addClass('open');
+	} else {
+		$(this).parents('.js-item-order').removeClass('open');
+	}
+});
+// Детальный просмотр заказа end --------------------------
+
