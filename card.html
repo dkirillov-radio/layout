@@ -1006,7 +1006,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="main-card" data-sticky-container>
+	<div class="main-card js-sticky-button-container" data-sticky-container>
 		<div class="main-card__body">
 			<div class="main-card__row">
 				<div class="main-card__left">
@@ -1318,14 +1318,14 @@
 													<a href="#" download="">Инструкция</a>
 												</div>
 												<div class="useful-files__btn">
-													<a href="#">
+													<div class="js-video-popup__btn">
 														Видеоинструкция
 														<span>
 															<svg>
 																<use xlink:href="#play"></use>
 															</svg>
 														</span>
-													</a>
+													</div>
 												</div>
 											</div>
 											<div class="useful-files__link">
@@ -1334,8 +1334,8 @@
 										</div>
 									</div>
 								</div>
-								<div class="card-spoiler__item js-spoiler-item">
-									<div class="card-spoiler__title js-spoiler-title">
+								<div class="card-spoiler__item inner js-spoiler-item">
+									<a href="#reviews" class="card-spoiler__title">
 										<div class="card-spoiler__heading">
 											Отзывы
 										</div>
@@ -1344,7 +1344,7 @@
 												<use xlink:href="#chevron"></use>
 											</svg>
 										</div>
-									</div>
+									</a>
 									<div class="card-spoiler__body js-spoiler-body">
 										<div class="reviews-card">
 											<div class="reviews-card__top">
@@ -1585,8 +1585,8 @@
 										</div>
 									</div>
 								</div>
-								<div class="card-spoiler__item js-spoiler-item">
-									<div class="card-spoiler__title js-spoiler-title">
+								<div class="card-spoiler__item inner js-spoiler-item">
+									<a href="#faq" class="card-spoiler__title">
 										<div class="card-spoiler__heading">
 											Вопрос-ответ
 										</div>
@@ -1595,7 +1595,7 @@
 												<use xlink:href="#chevron"></use>
 											</svg>
 										</div>
-									</div>
+									</a>
 									<div class="card-spoiler__body js-spoiler-body">
 										<div class="question-answer">
 											<div class="question-answer__title">
@@ -1687,12 +1687,14 @@
 						<div class="card-body__bottom">
 							<div class="card-body-bottom">
 								<div class="card-body-bottom__row">
-									<div class="card-body-bottom__col">
-										<div class="card-body-bottom__btn js-small-basket__btn">
-											Добавить в корзину
-											<svg>
-												<use xlink:href="#basket-line"></use>
-											</svg>
+									<div class="card-body-bottom__col js-sticky-button">
+										<div class="card-body-bottom__btn-wrap">
+											<div class="card-body-bottom__btn js-small-basket__btn">
+												Добавить в корзину
+												<svg>
+													<use xlink:href="#basket-line"></use>
+												</svg>
+											</div>
 										</div>
 									</div>
 									<div class="card-body-bottom__col">
@@ -1722,70 +1724,27 @@
 								</div>
 							</div>
 						</div>
-						<!-- <div class="card-body__wrapper js-sticky-block" data-sticky-wrap="true" data-sticky-class="is-sticky"
-							data-margin-top="135px" data-sticky-for="991.98">
-							<div class="card-body__top" data-da=".main-card__body,991.97,0">
-								<div class="card-body__top-title">
-									<h1>
-										Прикроватная тумба Рамзес Великий
-									</h1>
-								</div>
-								<div class="card-body__top-row">
-									<div class="card-body__top-text">
-										Коричневый/белый, 50 х 40 х 48 см
-									</div>
-									<div class="card-body__top-code">
-										Артикул 312323
-									</div>
-								</div>
-							</div>
-							<div class="card-body__center">
-								<div class="card-body-center">
-									<div class="card-body-center__price-old">
-										<span>10 700 ₽ </span>
-									</div>
-									<div class="card-body-center__line">
-										<div class="card-body-center__price">
-											10 700 ₽
-										</div>
-										<div class="card-body-center__label">
-											-20 %
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="card-body__bottom">
-								<div class="card-body-bottom">
-									<div class="card-body-bottom__row">
-										<div class="card-body-bottom__col">
-											<div class="card-body-bottom__btn js-small-basket__btn">
-												Добавить в корзину
-												<svg>
-													<use xlink:href="#basket-line"></use>
-												</svg>
-											</div>
-										</div>
-										<div class="card-body-bottom__col">
-											 Для смени вида сердечка нужно добавить класс active
-											<a href="#" class="card-body-bottom__btn-favorite">
-												<svg>
-													<use xlink:href="#heart"></use>
-												</svg>
-												<svg>
-													<use xlink:href="#heart-fill"></use>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>   -->
 
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<div class="card-block" id="reviews">
+		<div class="card-block__title">
+			<h2>
+				Отзывы (10)
+			</h2>
+		</div>
+	</div>
+	<div class="card-block" id="faq">
+		<div class="card-block__title">
+			<h2>
+				Вопрос-ответ
+			</h2>
+		</div>
+	</div>
+
 
 </div>
 
@@ -3553,6 +3512,27 @@
 	</div>
 </div>
 <!-- end Popup галерея -->
+
+<!-- Popup видео -->
+<div class="gallery-popup js-video-popup">
+	<div class="gallery-popup__body">
+		<div class="gallery-popup__close js-video-popup__close">
+			<svg>
+				<use xlink:href="#close"></use>
+			</svg>
+		</div>
+		<div class="gallery-popup__box">
+			<div class="gallery-popup__row">
+				<div class="gallery-popup__center">
+					<div class="gallery-popup__video">
+						<video controls src="video.mp4"></video>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end Popup видео -->
 
 
 

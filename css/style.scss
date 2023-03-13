@@ -4015,7 +4015,7 @@ textarea.form-control {
 	&__top {
 		@media (max-width: $md4) {
 			margin: 0 -18px;
-			overflow: auto;
+			overflow-x: scroll;
 		}
 	}
 	// .catalog-home__top-row
@@ -4025,7 +4025,7 @@ textarea.form-control {
 		margin: -8px;
 		@media (max-width: $md4) {
 			flex-wrap: nowrap;
-			margin: -4px;
+			margin: 0 -4px;
 			padding: 0 18px;
 		}
 	}
@@ -4044,7 +4044,7 @@ textarea.form-control {
 			flex: 0 0 auto;
 			width: auto;
 			max-width: 100%;
-			padding: 4px;
+			padding: 0 4px;
 		}
 		&-big {
 			flex: 0 0 auto;
@@ -4065,7 +4065,7 @@ textarea.form-control {
 				flex: 0 0 auto;
 				width: auto;
 				max-width: 100%;
-				padding: 4px;
+				padding: 0 4px;
 			}
 		}
 		&-small {
@@ -4087,7 +4087,7 @@ textarea.form-control {
 				flex: 0 0 auto;
 				width: auto;
 				max-width: 100%;
-				padding: 4px;
+				padding: 0 4px;
 			}
 		}
 	}
@@ -5487,7 +5487,7 @@ textarea.form-control {
 	&__spoiler {
 		margin-top: 30px;
 		order: 1;
-		@media (max-width: $md4) {
+		@media (max-width: $md2) {
 			order: 0;
 			margin-top: 0;
 			margin-bottom: 20px;
@@ -5727,7 +5727,29 @@ textarea.form-control {
 			width: auto;
 			max-width: 100%;
 		}
+		@media (max-width: $md2) {
+			min-height: 48px;
+		}
+		@media (max-width: $md4) {
+			min-height: 40px;
+		}
+		&.fixed {
+			.card-body-bottom__btn-wrap {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				z-index: 10;
+				background: var(--color-white);
+				padding: 16px 18px;
+			}
+		}
 	}
+
+	// .card-body-bottom__btn-wrap
+	&__btn-wrap {
+	}
+
 	// .card-body-bottom__btn
 	&__btn {
 		background: var(--color-black-200);
@@ -5872,7 +5894,9 @@ textarea.form-control {
 	// .card-spoiler__item
 	&__item {
 		padding: 5px 0;
-		border-bottom: 1px solid var(--color-gray);
+		&:not(:last-child) {
+			border-bottom: 1px solid var(--color-gray);
+		}
 		&:first-child {
 			border-top: 1px solid var(--color-gray);
 		}
@@ -5885,6 +5909,22 @@ textarea.form-control {
 		}
 		@media (max-width: $md4) {
 			padding: 0;
+		}
+		&.inner {
+			&:not(:last-child) {
+				border-bottom: 1px solid #dfdfdf;
+			}
+
+			.card-spoiler__heading {
+				font-weight: 400;
+			}
+			.card-spoiler__arrow {
+				svg {
+					width: 8px;
+					height: 8px;
+					transform: rotate(-90deg);
+				}
+			}
 		}
 	}
 	// .card-spoiler__title
@@ -6069,7 +6109,8 @@ textarea.form-control {
 		flex: 0 0 auto;
 		width: auto;
 		max-width: 100%;
-		a {
+		div {
+			cursor: pointer;
 			display: inline-flex;
 			align-items: center;
 			column-gap: 40px;
@@ -6541,7 +6582,10 @@ textarea.form-control {
 		padding: 50px;
 	}
 	@media (max-width: $md2) {
-		display: none;
+		padding: 10px;
+		&.js-gallery-popup {
+			display: none;
+		}
 	}
 	// .gallery-popup__body
 	&__body {
@@ -6653,6 +6697,25 @@ textarea.form-control {
 		max-width: 100%;
 		@media (max-width: $md1) {
 			display: none;
+		}
+	}
+	// .gallery-popup__video
+	&__video {
+		display: block;
+		width: 100%;
+		height: 0;
+		position: relative;
+		overflow: hidden;
+		padding-bottom: adaptive-block(678, 1100);
+		iframe,
+		video {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100% !important;
+			height: 100% !important;
+			transform: translate(-50%, -50%);
+			object-fit: cover;
 		}
 	}
 }
@@ -6972,6 +7035,12 @@ textarea.form-control {
 			width: 14px;
 			height: 14px;
 		}
+	}
+}
+.card-block {
+	margin-top: 80px;
+	// .card-block__title
+	&__title {
 	}
 }
 
@@ -8396,7 +8465,6 @@ textarea.form-control {
 			.noUi-origin {
 				&:last-child {
 					.noUi-handle {
-						right: 0;
 					}
 				}
 			}
@@ -8419,7 +8487,7 @@ textarea.form-control {
 			border-radius: 50%;
 			background: var(--color-black-200);
 			box-shadow: none;
-			right: -20px;
+			right: -10px;
 			top: -8px;
 			border: none;
 			display: flex;
@@ -11597,6 +11665,14 @@ textarea.form-control {
 	}
 	// .checkout-page__btn
 	&__btn {
+		&:first-child {
+			.btn {
+				min-width: 348px;
+				@media (max-width: $md1) {
+					min-width: 300px;
+				}
+			}
+		}
 		@media (max-width: $md4) {
 			flex: 0 0 auto;
 			width: 100%;
