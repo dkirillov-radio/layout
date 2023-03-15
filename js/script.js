@@ -344,6 +344,25 @@ $(document).on('click', '.js-menu__close', function () {
 });
 // js для мобильного меню end ===============
 
+
+// js для меню каталога ===============
+$(document).on('click', '.js-catalog-menu__btn', function () {
+	if (!$(this).hasClass('open')) {
+		$(this).addClass('open');
+		$(this).parents('.js-catalog-menu').find('.js-catalog-menu__body').addClass('open');
+	} else {
+		$(this).removeClass('open');
+		$(this).parents('.js-catalog-menu').find('.js-catalog-menu__body').removeClass('open');
+	}
+});
+$(document).on('click', function (e) {
+	if (!$(e.target).closest('.js-catalog-menu').length && !$(e.target).closest('.js-catalog-menu__btn').length) {
+		$('.js-catalog-menu__btn').removeClass('open');
+		$('.js-catalog-menu__body').removeClass('open');
+	}
+});
+// js для меню каталога end ===============
+
 // spoiler start ===============================================
 $(document).on('click', '.js-spoiler-title', function () {
 	let parents = $(this).parents('.js-spoiler');

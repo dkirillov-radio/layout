@@ -19,6 +19,10 @@
 		<path fill-rule="evenodd" clip-rule="evenodd"
 			d="M22.1716 0.462853L25.3536 3.64483C25.5488 3.8401 25.5488 4.15668 25.3536 4.35194L22.1716 7.53392C21.9763 7.72918 21.6597 7.72918 21.4645 7.53392C21.2692 7.33866 21.2692 7.02208 21.4645 6.82681L23.7929 4.49839L0 4.49839L0 3.49839L23.7929 3.49839L21.4645 1.16996C21.2692 0.974698 21.2692 0.658115 21.4645 0.462853C21.6597 0.267591 21.9763 0.267591 22.1716 0.462853Z" />
 	</symbol>
+	<symbol viewBox="0 0 11 8" xmlns="http://www.w3.org/2000/svg" id="arrow-icon">
+		<path fill-rule="evenodd" clip-rule="evenodd"
+			d="M7.17157 0.464563L10.3536 3.64654C10.5488 3.84181 10.5488 4.15839 10.3536 4.35365L7.17157 7.53563C6.97631 7.73089 6.65973 7.73089 6.46447 7.53563C6.2692 7.34037 6.2692 7.02379 6.46447 6.82852L8.79289 4.5001L-3.65601e-07 4.5001L-2.78178e-07 3.5001L8.79289 3.5001L6.46447 1.17167C6.2692 0.976407 6.2692 0.659825 6.46447 0.464562C6.65973 0.2693 6.97631 0.2693 7.17157 0.464563Z" />
+	</symbol>
 	<symbol viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" id="basket">
 		<path fill-rule="evenodd" clip-rule="evenodd"
 			d="M7.73093 2.82051C7.0579 3.30956 6.75 3.89974 6.75 4.45455V5.18182H14.25V4.45455C14.25 3.90131 13.943 3.31104 13.2706 2.82165C12.5996 2.33319 11.6233 2 10.5 2C9.37937 2 8.40284 2.33227 7.73093 2.82051ZM16.25 5.18182V4.45455C16.25 3.10347 15.4942 1.96646 14.4476 1.20466C13.3998 0.441919 12.001 0 10.5 0C9.00219 0 7.60373 0.440683 6.55525 1.20256C5.50788 1.96362 4.75 3.10071 4.75 4.45455V5.18182H0V21H21V5.18182H16.25ZM14.25 7.18182V7.90909C14.25 8.46138 14.6977 8.90909 15.25 8.90909C15.8023 8.90909 16.25 8.46138 16.25 7.90909V7.18182H19V19H2V7.18182H4.75V7.90909C4.75 8.46138 5.19772 8.90909 5.75 8.90909C6.30228 8.90909 6.75 8.46138 6.75 7.90909V7.18182H14.25Z" />
@@ -267,9 +271,9 @@
 								<div class="header-bottom__left">
 									<div class="header-bottom__btn">
 										<!-- Если убрать класс disabled то будет всплывать подменю -->
-										<div class="catalog-menu disabled">
+										<div class="catalog-menu js-catalog-menu">
 											<div class="catalog-menu__top">
-												<a href="#" class="catalog-btn">
+												<div class="catalog-btn js-catalog-menu__btn">
 													<div class="catalog-btn__body">
 														<span></span>
 														<span></span>
@@ -278,11 +282,114 @@
 													<div class="catalog-btn__text">
 														КАТАЛОГ
 													</div>
-												</a>
+												</div>
 											</div>
-											<div class="catalog-menu__box">
+											<div class="catalog-menu__box js-catalog-menu__body">
 												<div class="catalog-menu__wrap">
-													<div class="catalog-menu__boxes js-menu-catalog">
+
+													<!-- Первый вариант отображения меню -->
+													<div class="catalog-menu-sections">
+														<div class="catalog-menu-sections__row">
+															<div class="catalog-menu-sections__col">
+																<a href="catalog.html" class="catalog-menu-sections__item">
+																	<div class="catalog-menu-sections__img">
+																		<picture>
+																			<source srcset="img/test/colection-1.webp" type="image/webp">
+																			<img src="img/test/colection-1.png" alt="#" />
+																		</picture>
+																	</div>
+																	<div class="catalog-menu-sections__name">
+																		Комоды
+																		<svg>
+																			<use xlink:href="#arrow-icon"></use>
+																		</svg>
+																	</div>
+																</a>
+															</div>
+															<div class="catalog-menu-sections__col">
+																<a href="catalog.html" class="catalog-menu-sections__item">
+																	<div class="catalog-menu-sections__img">
+																		<picture>
+																			<source srcset="img/test/colection-2.webp" type="image/webp">
+																			<img src="img/test/colection-2.png" alt="#" />
+																		</picture>
+																	</div>
+																	<div class="catalog-menu-sections__name">
+																		Подвестные тумбы
+																		<svg>
+																			<use xlink:href="#arrow-icon"></use>
+																		</svg>
+																	</div>
+																</a>
+															</div>
+															<div class="catalog-menu-sections__col">
+																<a href="catalog.html" class="catalog-menu-sections__item">
+																	<div class="catalog-menu-sections__img">
+																		<picture>
+																			<source srcset="img/test/colection-3.webp" type="image/webp">
+																			<img src="img/test/colection-3.png" alt="#" />
+																		</picture>
+																	</div>
+																	<div class="catalog-menu-sections__name">
+																		Прикроватные тумбы
+																		<svg>
+																			<use xlink:href="#arrow-icon"></use>
+																		</svg>
+																	</div>
+																</a>
+															</div>
+															<div class="catalog-menu-sections__col">
+																<a href="catalog.html" class="catalog-menu-sections__item">
+																	<div class="catalog-menu-sections__img">
+																		<picture>
+																			<source srcset="img/test/colection-1.webp" type="image/webp">
+																			<img src="img/test/colection-1.png" alt="#" />
+																		</picture>
+																	</div>
+																	<div class="catalog-menu-sections__name">
+																		Тв-тумбы
+																		<svg>
+																			<use xlink:href="#arrow-icon"></use>
+																		</svg>
+																	</div>
+																</a>
+															</div>
+															<div class="catalog-menu-sections__col">
+																<a href="catalog.html" class="catalog-menu-sections__item">
+																	<div class="catalog-menu-sections__img">
+																		<picture>
+																			<source srcset="img/test/colection-2.webp" type="image/webp">
+																			<img src="img/test/colection-2.png" alt="#" />
+																		</picture>
+																	</div>
+																	<div class="catalog-menu-sections__name">
+																		Тумбы
+																		<svg>
+																			<use xlink:href="#arrow-icon"></use>
+																		</svg>
+																	</div>
+																</a>
+															</div>
+															<div class="catalog-menu-sections__col">
+																<a href="catalog.html" class="catalog-menu-sections__item active">
+																	<div class="catalog-menu-sections__img">
+																		<picture>
+																			<source srcset="img/test/colection-3.webp" type="image/webp">
+																			<img src="img/test/colection-3.png" alt="#" />
+																		</picture>
+																	</div>
+																	<div class="catalog-menu-sections__name">
+																		Акции
+																		<svg>
+																			<use xlink:href="#arrow-icon"></use>
+																		</svg>
+																	</div>
+																</a>
+															</div>
+														</div>
+													</div>
+													<!-- Второй вариант отображения меню -->
+													<!-- <div class="catalog-menu__boxes js-menu-catalog">
 														<div class="catalog-menu__level-1">
 															<div class="catalog-menu__items">
 																<div class="catalog-menu__item js-menu-catalog__item" data-tab="1">
@@ -444,7 +551,7 @@
 																</div>
 															</div>
 														</div>
-													</div>
+													</div> -->
 												</div>
 											</div>
 										</div>
@@ -1091,6 +1198,144 @@
 										</div>
 									</div>
 									<div class="catalog-filter-block__item">
+										<div class="item-block-filter js-block">
+											<div class="item-block-filter__top js-block-btn">
+												<div class="item-block-filter__top-text">
+													Размеры, см
+												</div>
+												<div class="item-block-filter__top-icon">
+													<svg>
+														<use xlink:href="#close"></use>
+													</svg>
+												</div>
+											</div>
+											<div class="item-block-filter__body js-block-body">
+												<div class="item-block-filter__box">
+													<div class="item-block-filter__line">
+														<div class="item-block-filter__title">
+															Размеры, см
+														</div>
+														<div class="item-block-filter__close js-block-close">
+															<svg>
+																<use xlink:href="#close"></use>
+															</svg>
+														</div>
+													</div>
+													<div class="item-block-filter__items">
+														<div class="item-no-ui js-slider-noui">
+															<div class="item-no-ui__title">
+																Высота, см
+															</div>
+															<div class="item-no-ui__top">
+																<div class="item-no-ui__row">
+																	<div class="item-no-ui__left">
+																		<div class="item-no-ui__body">
+																			<div class="item-no-ui__text">
+																				от
+																			</div>
+																			<div class="item-no-ui__input">
+																				<input type="text" class="js-slider-noui-from">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="item-no-ui__center">
+																		<div class="item-no-ui__label"></div>
+																	</div>
+																	<div class="item-no-ui__right">
+																		<div class="item-no-ui__body">
+																			<div class="item-no-ui__text">
+																				до
+																			</div>
+																			<div class="item-no-ui__input">
+																				<input type="text" class="js-slider-noui-to">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="item-no-ui__bottom">
+																<div class="no-ui-slider js-slider-noui-slider" data-min="20"
+																	data-max="220"></div>
+															</div>
+														</div>
+														<div class="item-no-ui js-slider-noui">
+															<div class="item-no-ui__title">
+																Длина, см
+															</div>
+															<div class="item-no-ui__top">
+																<div class="item-no-ui__row">
+																	<div class="item-no-ui__left">
+																		<div class="item-no-ui__body">
+																			<div class="item-no-ui__text">
+																				от
+																			</div>
+																			<div class="item-no-ui__input">
+																				<input type="text" class="js-slider-noui-from">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="item-no-ui__center">
+																		<div class="item-no-ui__label"></div>
+																	</div>
+																	<div class="item-no-ui__right">
+																		<div class="item-no-ui__body">
+																			<div class="item-no-ui__text">
+																				до
+																			</div>
+																			<div class="item-no-ui__input">
+																				<input type="text" class="js-slider-noui-to">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="item-no-ui__bottom">
+																<div class="no-ui-slider js-slider-noui-slider" data-min="20"
+																	data-max="220"></div>
+															</div>
+														</div>
+														<div class="item-no-ui js-slider-noui">
+															<div class="item-no-ui__title">
+																Глубина, см
+															</div>
+															<div class="item-no-ui__top">
+																<div class="item-no-ui__row">
+																	<div class="item-no-ui__left">
+																		<div class="item-no-ui__body">
+																			<div class="item-no-ui__text">
+																				от
+																			</div>
+																			<div class="item-no-ui__input">
+																				<input type="text" class="js-slider-noui-from">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="item-no-ui__center">
+																		<div class="item-no-ui__label"></div>
+																	</div>
+																	<div class="item-no-ui__right">
+																		<div class="item-no-ui__body">
+																			<div class="item-no-ui__text">
+																				до
+																			</div>
+																			<div class="item-no-ui__input">
+																				<input type="text" class="js-slider-noui-to">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="item-no-ui__bottom">
+																<div class="no-ui-slider js-slider-noui-slider" data-min="20"
+																	data-max="220"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="catalog-filter-block__item">
 										<div class="item-block-filter active js-block">
 											<div class="item-block-filter__top js-block-btn">
 												<div class="item-block-filter__top-text">
@@ -1364,144 +1609,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="catalog-filter-block__item">
-										<div class="item-block-filter js-block">
-											<div class="item-block-filter__top js-block-btn">
-												<div class="item-block-filter__top-text">
-													Размеры, см
-												</div>
-												<div class="item-block-filter__top-icon">
-													<svg>
-														<use xlink:href="#close"></use>
-													</svg>
-												</div>
-											</div>
-											<div class="item-block-filter__body js-block-body">
-												<div class="item-block-filter__box">
-													<div class="item-block-filter__line">
-														<div class="item-block-filter__title">
-															Размеры, см
-														</div>
-														<div class="item-block-filter__close js-block-close">
-															<svg>
-																<use xlink:href="#close"></use>
-															</svg>
-														</div>
-													</div>
-													<div class="item-block-filter__items">
-														<div class="item-no-ui js-slider-noui">
-															<div class="item-no-ui__title">
-																Высота, см
-															</div>
-															<div class="item-no-ui__top">
-																<div class="item-no-ui__row">
-																	<div class="item-no-ui__left">
-																		<div class="item-no-ui__body">
-																			<div class="item-no-ui__text">
-																				от
-																			</div>
-																			<div class="item-no-ui__input">
-																				<input type="text" class="js-slider-noui-from">
-																			</div>
-																		</div>
-																	</div>
-																	<div class="item-no-ui__center">
-																		<div class="item-no-ui__label"></div>
-																	</div>
-																	<div class="item-no-ui__right">
-																		<div class="item-no-ui__body">
-																			<div class="item-no-ui__text">
-																				до
-																			</div>
-																			<div class="item-no-ui__input">
-																				<input type="text" class="js-slider-noui-to">
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="item-no-ui__bottom">
-																<div class="no-ui-slider js-slider-noui-slider" data-min="20"
-																	data-max="220"></div>
-															</div>
-														</div>
-														<div class="item-no-ui js-slider-noui">
-															<div class="item-no-ui__title">
-																Длина, см
-															</div>
-															<div class="item-no-ui__top">
-																<div class="item-no-ui__row">
-																	<div class="item-no-ui__left">
-																		<div class="item-no-ui__body">
-																			<div class="item-no-ui__text">
-																				от
-																			</div>
-																			<div class="item-no-ui__input">
-																				<input type="text" class="js-slider-noui-from">
-																			</div>
-																		</div>
-																	</div>
-																	<div class="item-no-ui__center">
-																		<div class="item-no-ui__label"></div>
-																	</div>
-																	<div class="item-no-ui__right">
-																		<div class="item-no-ui__body">
-																			<div class="item-no-ui__text">
-																				до
-																			</div>
-																			<div class="item-no-ui__input">
-																				<input type="text" class="js-slider-noui-to">
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="item-no-ui__bottom">
-																<div class="no-ui-slider js-slider-noui-slider" data-min="20"
-																	data-max="220"></div>
-															</div>
-														</div>
-														<div class="item-no-ui js-slider-noui">
-															<div class="item-no-ui__title">
-																Глубина, см
-															</div>
-															<div class="item-no-ui__top">
-																<div class="item-no-ui__row">
-																	<div class="item-no-ui__left">
-																		<div class="item-no-ui__body">
-																			<div class="item-no-ui__text">
-																				от
-																			</div>
-																			<div class="item-no-ui__input">
-																				<input type="text" class="js-slider-noui-from">
-																			</div>
-																		</div>
-																	</div>
-																	<div class="item-no-ui__center">
-																		<div class="item-no-ui__label"></div>
-																	</div>
-																	<div class="item-no-ui__right">
-																		<div class="item-no-ui__body">
-																			<div class="item-no-ui__text">
-																				до
-																			</div>
-																			<div class="item-no-ui__input">
-																				<input type="text" class="js-slider-noui-to">
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="item-no-ui__bottom">
-																<div class="no-ui-slider js-slider-noui-slider" data-min="20"
-																	data-max="220"></div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+
 								</div>
 							</div>
 						</div>

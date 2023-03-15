@@ -1829,6 +1829,9 @@ textarea.form-control {
 	&__row {
 		display: flex;
 		margin: 0 -8px;
+		@media (max-width: $md2) {
+			flex-wrap: wrap;
+		}
 	}
 	// .content-block__left
 	&__left {
@@ -1842,6 +1845,12 @@ textarea.form-control {
 			max-width: 100%;
 		}
 		@media (max-width: $md2) {
+			flex: 0 0 auto;
+			width: 100%;
+			max-width: 100%;
+			margin-bottom: 35px;
+		}
+		@media (max-width: $md4) {
 			display: none;
 		}
 	}
@@ -1851,6 +1860,11 @@ textarea.form-control {
 		flex: 1 0 0%;
 		width: 100%;
 		max-width: 100%;
+		@media (max-width: $md2) {
+			flex: 0 0 auto;
+			width: 100%;
+			max-width: 100%;
+		}
 	}
 	// .content-block__body
 	&__body {
@@ -1867,10 +1881,23 @@ textarea.form-control {
 	}
 }
 .content-block-menu {
+	@media (max-width: $md2) {
+		overflow-x: scroll;
+		padding-bottom: 10px;
+		margin: 0 -18px;
+	}
 	ul {
+		@media (max-width: $md2) {
+			display: flex;
+			column-gap: 20px;
+			padding: 0 18px;
+		}
 		li {
 			&:not(:last-child) {
 				margin-bottom: 10px;
+				@media (max-width: $md2) {
+					margin-bottom: 0;
+				}
 			}
 			a {
 				color: var(--color-black);
@@ -1883,6 +1910,9 @@ textarea.form-control {
 				}
 				&:hover {
 					text-decoration: underline;
+				}
+				@media (max-width: $md2) {
+					white-space: nowrap;
 				}
 			}
 		}
@@ -2200,7 +2230,7 @@ textarea.form-control {
 	background: var(--color-black-200);
 	border-radius: 10px;
 	padding: 8px 30px;
-	transition: var(--transition-normal);
+	transition: all 0.1s ease 0s;
 	@media (min-width: $md2) {
 		&:hover {
 			background: var(--color-black-200-hover);
@@ -2212,7 +2242,7 @@ textarea.form-control {
 		padding: 6px;
 		background: transparent;
 	}
-	&.active {
+	&.open {
 		.catalog-btn__body {
 			span {
 				transform: scale(0);
@@ -2446,6 +2476,7 @@ textarea.form-control {
 		visibility: hidden;
 		pointer-events: none;
 		transition: all 0.5s ease 0s;
+		padding-top: 1px;
 		@media (max-width: $md2) {
 			display: none;
 		}
@@ -2667,10 +2698,10 @@ textarea.form-control {
 	width: 209px;
 	cursor: text;
 	@media (max-width: $md2) {
-		width: 350px;
+		width: 450px;
 	}
 	@media (max-width: $md3) {
-		width: 340px;
+		width: 390px;
 	}
 	&:before {
 		content: "";
@@ -2981,17 +3012,111 @@ textarea.form-control {
 		}
 	}
 }
-.catalog-menu {
-	@media (min-width: $md2) {
-		&:hover {
-			.catalog-menu__box {
-				opacity: 1;
-				visibility: visible;
-				pointer-events: auto;
-				top: 100%;
-			}
+.catalog-menu-sections {
+	padding: 40px 0;
+	@media (max-width: $md2) {
+		padding: 20px 0;
+	}
+	// .catalog-menu-sections__row
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -5px -8px;
+	}
+	// .catalog-menu-sections__col
+	&__col {
+		padding: 5px 8px;
+		flex: 0 0 auto;
+		width: 16.666%;
+		max-width: 100%;
+		@media (max-width: $md2) {
+			flex: 0 0 auto;
+			width: 33.333%;
+			max-width: 100%;
 		}
 	}
+	// .catalog-menu-sections__item
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: var(--color-black);
+		row-gap: 30px;
+		&:hover {
+			text-decoration: underline;
+		}
+		&.active {
+			color: var(--color-red);
+		}
+		@media (max-width: $max) {
+			row-gap: 25px;
+		}
+		@media (max-width: $md2) {
+			row-gap: 10px;
+		}
+	}
+	// .catalog-menu-sections__img
+	&__img {
+		border-radius: 10px;
+		display: block;
+		width: 100%;
+		height: 0;
+		position: relative;
+		overflow: hidden;
+		padding-bottom: adaptive-block(140, 227);
+		@media (max-width: $max) {
+			padding-bottom: adaptive-block(104, 141);
+		}
+		@media (max-width: $md2) {
+		}
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: 100%;
+			transform: translate(-50%, -50%);
+			object-fit: cover;
+		}
+	}
+	// .catalog-menu-sections__name
+	&__name {
+		color: inherit;
+		display: inline-flex;
+		align-items: center;
+		justify-content: flex-start;
+		column-gap: 10px;
+		font-size: 18px;
+		line-height: 110%;
+		text-transform: uppercase;
+		@media (max-width: $max) {
+			font-size: 16px;
+			text-transform: none;
+		}
+		@media (max-width: $md2) {
+			font-size: 14px;
+		}
+		svg {
+			flex: 0 0 auto;
+			width: 12px;
+			max-width: 100%;
+			height: 12px;
+			fill: currentColor;
+		}
+	}
+}
+
+.catalog-menu {
+	// @media (min-width: $md2) {
+	// 	&:hover {
+	// 		.catalog-menu__box {
+	// 			opacity: 1;
+	// 			visibility: visible;
+	// 			pointer-events: auto;
+	// 			top: 100%;
+	// 		}
+	// 	}
+	// }
 	&.disabled {
 		@media (min-width: $md2) {
 			&:hover {
@@ -3004,7 +3129,7 @@ textarea.form-control {
 	// .catalog-menu__top
 	&__top {
 		padding: 12px 0;
-		@media (max-width:$md2){
+		@media (max-width: $md2) {
 			padding: 0;
 		}
 	}
@@ -3020,8 +3145,17 @@ textarea.form-control {
 		visibility: hidden;
 		pointer-events: none;
 		transition: all 0.5s ease 0s;
-		@media (max-width: $md2) {
+		padding-top: 1px;
+		@media (max-width: $md4) {
 			display: none;
+		}
+		@media (min-width: $md4) {
+			&.open {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+				top: 100%;
+			}
 		}
 	}
 	// .catalog-menu__wrap
@@ -6015,7 +6149,7 @@ textarea.form-control {
 	&__right {
 		padding: 0 10px;
 		flex: 0 0 auto;
-		width: 300px;
+		width: auto;
 		max-width: 100%;
 		height: 42px;
 		display: flex;
@@ -6243,7 +6377,6 @@ textarea.form-control {
 	&__items {
 		display: flex;
 		align-items: center;
-		flex-wrap: wrap;
 		margin: -7.5px -15px;
 		@media (max-width: $max) {
 			margin: -7.5px;
@@ -6369,6 +6502,7 @@ textarea.form-control {
 		line-height: 1;
 		color: var(--color-black);
 		transition: var(--transition-normal);
+		white-space: nowrap;
 		@media (max-width: $md1) {
 			font-size: 14px;
 		}
